@@ -1,7 +1,7 @@
 import axios from "axios";
 import {useEffect,useState} from "react";
 import './App.css';
-import {Link } from 'react-roter-dom'
+import {Link } from 'react-router-dom'
 
 function App() {
   const[columns,setColumns] =useState([])
@@ -19,7 +19,7 @@ function App() {
   return (
   
     <div className="container mt-5">
-      <div className="text-end"><Link></Link></div>
+      <div className="text-end"><Link to='/create' className="btn btn-primary">Add+</Link></div>
      <table className="table">
       <thead>
 <tr>
