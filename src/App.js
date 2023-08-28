@@ -1,6 +1,7 @@
 import axios from "axios";
 import {useEffect,useState} from "react";
 import './App.css';
+import {Link } from 'react-roter-dom'
 
 function App() {
   const[columns,setColumns] =useState([])
@@ -18,6 +19,7 @@ function App() {
   return (
   
     <div className="container mt-5">
+      <div className="text-end"><Link></Link></div>
      <table className="table">
       <thead>
 <tr>
