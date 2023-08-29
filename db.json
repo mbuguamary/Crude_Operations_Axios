@@ -30,14 +30,9 @@
       "email": "mercy@gmail.com"
     },
     {
-      "id": 4,
-      "name": "Grace Kamau",
-      "email": "grace@gmail.com"
-    },
-    {
       "name": "Tom Kana",
       "email": "tom@gmail.com",
-      "id": 5
+      "id": 4
     }
   ],
   "profile": {

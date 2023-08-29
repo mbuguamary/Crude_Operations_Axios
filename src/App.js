@@ -1,11 +1,12 @@
 import axios from "axios";
 import {useEffect,useState} from "react";
 import './App.css';
-import {Link } from 'react-router-dom'
+import {Link,useNavigate } from 'react-router-dom'
 
 function App() {
   const[columns,setColumns] =useState([])
   const [records,setRecords] = useState([])
+  const navigate = useNavigate();
   useEffect(() => {
   axios.get('http://localhost:8080/users')
 
@@ -27,6 +28,7 @@ function App() {
     c,i) => (
     <th key={i}>{c} </th>
     )) }
+    <th>Action</th>
 </tr>
       </thead>
       <tbody>
@@ -37,7 +39,7 @@ function App() {
           <td>{d.email}</td>
           <td>
             <Link to = {`/update/${d.id}`} className="btn btn-sm btn-success">Update</Link>
-            <Link to= '/delete' className="btn btn-sm ms-1 btn-danger"> Delete</Link>
+            <button onClick={e => handleSubmit(d.id)} className="btn btn-sm ms-1 btn-danger"> Delete</button>
           </td>
 
         </tr>
@@ -45,10 +47,22 @@ function App() {
 }
       </tbody>
      </table>
-
-   <p>testing</p>  
+ 
     </div>
   );
+  function handleSubmit(id){
+const conf = window.confirm("do you want to delete");
+  if(conf){
+    axios.delete('http://localhost:8080/users/'+id)
+    .then(res =>{
+      alert('Record Deleted Successfully');
+      const updatedRecords = records.filter(data => data.id !== id);
+                setRecords(updatedRecords);
+      
+      navigate('/');
+    }).catch(err =>console.log(err))
+  }
+}
 }
 
 export default App;
