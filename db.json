@@ -16,26 +16,26 @@
   "users": [
     {
       "id": 1,
-      "name": "Mary",
+      "name": "Mary Mbugua",
       "email": "mary@gmail.com"
     },
     {
       "id": 2,
-      "name": "Ann",
+      "name": "Ann Wambui",
       "email": "ann@gmail.com"
     },
     {
       "id": 3,
-      "name": "Mercy",
+      "name": "Mercy wangui",
       "email": "mercy@gmail.com"
     },
     {
       "id": 4,
-      "name": "Grace",
+      "name": "Grace Kamau",
       "email": "grace@gmail.com"
     },
     {
-      "name": "tom",
+      "name": "Tom Kana",
       "email": "tom@gmail.com",
       "id": 5
     }
